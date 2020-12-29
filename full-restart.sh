@@ -20,6 +20,10 @@ echo "Removing old certificates..."
 sudo rm -rf ./data/certbot
 echo
 
+echo "Set mongodb volume to be mounted"
+sudo chmod -R 777 ./mongodb
+echo
+
 echo "Starting Nodejs and Mongodb... Setting up app-network..."
 docker-compose -f docker-compose-prod-feathers.yml up -d
 echo
