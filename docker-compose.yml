@@ -45,6 +45,16 @@ services:
         - "8888:8081"
     restart: on-failure:10
 
+  nginx:
+      image: nginx:1.15-alpine
+      ports:
+        - "80:80"
+      volumes:
+        - ./data/nginx:/etc/nginx/conf.d
+        - ./webapp:/usr/share/nginx/html
+      networks:
+        - lawy-server_app-network
+
 networks:
   app-network:
     driver: bridge
