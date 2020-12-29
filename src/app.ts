@@ -41,7 +41,9 @@ app.use('/', express.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(express.rest());
-app.configure(socketio());
+app.configure(socketio({
+  path: '/api'
+}));
 
 app.configure(mongoose);
 
