@@ -19,7 +19,6 @@ import channels from './channels';
 import { HookContext as FeathersHookContext } from '@feathersjs/feathers';
 import authentication from './authentication';
 import mongoose from './mongoose';
-const error = require('feathers-errors/handler');
 // Don't remove this comment. It's needed to format import lines nicely.
 
 const app: Application = express(feathers());
