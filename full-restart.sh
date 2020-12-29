@@ -20,7 +20,7 @@ sudo rm -rf ./data/certbot
 echo
 
 echo "Starting Nodejs and Mongodb... Setting up app-network..."
-docker-compose -f docker-compose-prod-feathers.yml up
+docker-compose -f docker-compose-prod-feathers.yml up -d
 echo
 
 if [ -d "$data_path" ]; then
