@@ -12,7 +12,8 @@ email="vf691184@fh-muenster.de" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 echo "Shutdown old instances if there! Maybe errors - dont care."
-docker-compose down --rmi=all
+docker-compose -f docker-compose-prod-feathers.yml down --rmi=all
+docker-compose -f docker-compose-prod.yml down --rmi=all
 echo
 
 echo "Removing old certificates..."
