@@ -11,6 +11,10 @@ data_path="./data/certbot"
 email="vf691184@fh-muenster.de" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
+echo "Shutdown old instances if there! Maybe errors - dont care."
+docker-compose down --rmi=all
+echo
+
 echo "Removing old certificates..."
 sudo rm -rf ./data/certbot
 echo
