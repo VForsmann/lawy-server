@@ -12,7 +12,7 @@ email="vf691184@fh-muenster.de" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 echo "Removing old certificates..."
-rm -rf ./data/certbot
+sudo rm -rf ./data/certbot
 echo
 
 echo "Starting Nodejs and Mongodb... Setting up app-network..."
